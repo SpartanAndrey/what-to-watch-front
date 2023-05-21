@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../components/footer/footer';
 
 type MainPageProps = {
   promoTitle: string;
@@ -40,10 +41,10 @@ function MainPage({promoTitle, promoGenre, promoYear}: MainPageProps): JSX.Eleme
 
           <div className="film-card__wrap">
             <div className="film-card__desc">
-              <h2 className="film-card__title">The Grand Budapest Hotel</h2>
+              <h2 className="film-card__title">{promoTitle}</h2>
               <p className="film-card__meta">
-                <span className="film-card__genre">Drama</span>
-                <span className="film-card__year">2014</span>
+                <span className="film-card__genre">{promoGenre}</span>
+                <span className="film-card__year">{promoYear}</span>
               </p>
 
               <div className="film-card__buttons">
@@ -297,19 +298,7 @@ function MainPage({promoTitle, promoGenre, promoYear}: MainPageProps): JSX.Eleme
           </div>
         </section>
 
-        <footer className="page-footer">
-          <div className="logo">
-            <a className="logo__link logo__link--light" href="#todo">
-              <span className="logo__letter logo__letter--1">W</span>
-              <span className="logo__letter logo__letter--2">T</span>
-              <span className="logo__letter logo__letter--3">W</span>
-            </a>
-          </div>
-
-          <div className="copyright">
-            <p>© 2019 What to watch Ltd.</p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </React.Fragment>
   );
